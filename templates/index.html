@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 500px;
+            text-align: center;
+        }
+        h1 {
+            color: #4A90E2;
+        }
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0;
+            justify-content: space-between;
+        }
+        .form-group label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 48%;  /* Two fields side by side */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .form-group input:nth-child(odd) {
+            margin-right: 4%;
+        }
+        input[type="submit"] {
+            background-color: #4A90E2;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        input[type="submit"]:hover {
+            background-color: #357ABD;
+        }
+        p {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        .message {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Input soil component details</h1>
+        <form id="myForm">
+            <div class="form-group">
+                <div>
+                    <label for="input1">Nitrogen</label>
+                    <input type="text" id="input1" name="input1" required>
+                </div>
+                <div>
+                    <label for="input2">Potassium</label>
+                    <input type="text" id="input2" name="input2" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="input3">Kalium</label>
+                    <input type="text" id="input3" name="input3" required>
+                </div>
+                <div>
+                    <label for="input4">Temperature</label>
+                    <input type="text" id="input4" name="input4" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="input5">Humidity</label>
+                    <input type="text" id="input5" name="input5" required>
+                </div>
+                <div>
+                    <label for="input6">ph</label>
+                    <input type="text" id="input6" name="input6" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="input7">Rainfall</label>
+                    <input type="text" id="input7" name="input7" required>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+        <p id="displayText" class="message" style="display: none;">Best crop for the soil : {{pred}}</p>
+    </div>
+
+   
+
+</body>
+</html>
