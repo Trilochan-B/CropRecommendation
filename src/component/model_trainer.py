@@ -32,8 +32,8 @@ class modelTrainer:
                 "DecisionTreee": DecisionTreeClassifier(),
                 "KNeighbour" : KNeighborsClassifier(),
                 "RandomForest": RandomForestClassifier(),
-                "AdaBoostRegressor" : AdaBoostClassifier(),
-                "GradientBoostingRegressor" : GradientBoostingClassifier()
+                "AdaBoostClassifier" : AdaBoostClassifier(),
+                "GradientBoostingClassifier" : GradientBoostingClassifier()
             }
 
             params = {
