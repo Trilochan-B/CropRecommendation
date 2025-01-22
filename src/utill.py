@@ -35,7 +35,8 @@ def evaluate_models(x_train,y_train,x_test,y_test,models,params):
             report[list(models.keys())[i]] = score
 
         return report
-
+    except Exception as e:
+        raise CustonmException(e,sys)
 
 
     except Exception as e:
