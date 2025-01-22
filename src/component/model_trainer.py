@@ -5,10 +5,9 @@ from src.logger import logging
 from src.exception import CustonmException
 from src.utill import save_object,evaluate_models
 
-from sklearn.linear_model import LinearRegression
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn.ensemble import RandomForestRegressor,AdaBoostRegressor,GradientBoostingRegressor
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier,AdaBoostClassifier,GradientBoostingClassifier
 
 from dataclasses import dataclass
 
@@ -30,12 +29,11 @@ class modelTrainer:
             )
             
             models ={
-                "LinearRegressor" : LinearRegression(),
-                "DecisionTreee": DecisionTreeRegressor(),
-                "KNeighbour" : KNeighborsRegressor(),
-                "RandomForest": RandomForestRegressor(),
-                "AdaBoostRegressor" : AdaBoostRegressor(),
-                "GradientBoostingRegressor" : GradientBoostingRegressor()
+                "DecisionTreee": DecisionTreeClassifier(),
+                "KNeighbour" : KNeighborsClassifier(),
+                "RandomForest": RandomForestClassifier(),
+                "AdaBoostRegressor" : AdaBoostClassifier(),
+                "GradientBoostingRegressor" : GradientBoostingClassifier()
             }
 
             params = {
