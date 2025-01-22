@@ -37,7 +37,6 @@ class modelTrainer:
             }
 
             params = {
-                "LinearRegressor" : {},
                 "DecisionTreee" : {
                     'criterion' : ['squared_error','friedman_mse','absolute_error','poisson']
                 },
@@ -47,11 +46,11 @@ class modelTrainer:
                 "RandomForest" : {
                     'n_estimators' : [8,16,32,64,128,256]
                 },
-                "AdaBoostRegressor" : {
+                "AdaBoostClassifier" : {
                     'learning_rate' : [.1,.01,0.05,0.001],
                     'n_estimators' : [8,16,32,64,128,256]
                 },
-                "GradientBoostingRegressor" : {
+                "GradientBoostingClassifier" : {
                     'subsample' : [0.6, 0.7, 0.75, 0.8, 0.85, 0.9],
                     'n_estimators' : [8,16,32,64,128,256],
                     'learning_rate' : [.1,.01,0.05,0.001]
